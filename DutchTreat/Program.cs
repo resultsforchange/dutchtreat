@@ -14,9 +14,17 @@ namespace DutchTreat
     {
         public static void Main(string[] args)
         {
-            BuildWebHost(args).Run();
+            BuildWebHost(args).Run();   // builds a webhost and starts listening for web requests
         }
 
+        /// <summary>
+        /// Creates a default builder for our WebHost and 
+        /// tells it what class to use to setup how to listen 
+        /// for web requests. It thens builds it, so that it 
+        /// can run it.
+        /// </summary>
+        /// <param name="args"></param>
+        /// <returns></returns>
         public static IWebHost BuildWebHost(string[] args) =>
             WebHost.CreateDefaultBuilder(args)
                 .UseStartup<Startup>()

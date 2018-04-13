@@ -1,0 +1,16 @@
+﻿{
+  "Colors": {
+    "Favorite": "blue"
+  },
+  "ConnectionStrings": {
+    "DutchConnectionString": "Data Source=localhost;Initial Catalog=DutchTreatDB;Integrated Security=True;MultipleActiveResultSets=true;"
+  },
+  "Logging": {
+    "LogLevel": {
+      "Default": "Information",
+      "Microsoft": "Warning"
+    }
+  }
+
+  // what we are saying above is, every logger that starts with the word Microsoft use warning
+}

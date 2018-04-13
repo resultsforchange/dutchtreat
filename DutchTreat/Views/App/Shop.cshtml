@@ -1,0 +1,25 @@
+﻿@model IEnumerable<Product>
+
+@{
+    ViewData["Title"] = "Shop";
+}
+
+<h2>Shop</h2>
+<p>Count: @Model.Count()</p>
+
+@foreach (var p in Model)
+{
+    <div class="col-md-3">
+        <div class="well well-sm">
+            <img src="~/img/@(p.ArtId).jpg" alt="@p.Title" class="img-responsive" />
+            <h3>@p.Category - @p.Size</h3>
+            <ul class="product-props">
+                <li>Price: @p.Price</li>
+                <li>Artist: @p.Artist</li>
+                <li>Title: @p.Title</li>
+                <li>Description: @p.ArtDescription</li>
+            </ul>
+            <button id="buyButton">Buy</button>
+        </div>
+    </div>
+}
